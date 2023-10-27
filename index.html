@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Muqesh - Data Science Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">Muqesh</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Atricles</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+<!-- Banner -->
+<div id="banner-container">
+    <!-- <img src="image/banner4.png" alt="Banner Image" style="width: 100%; max-width: 100%;" /> -->
+<!-- 
+    <div id="contact-details">
+        <div id="contact-right">
+            <img src="image/Fotu.JPEG" alt="Your Picture" class="profile-image" />
+            <p>Mukesh Rana</p>
+            <p>muqeshrana@gmail.com</p>
+            <p>mukeshrana.cds15@iiitb.net</p>
+            <p>+91 86985 59419</p>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- Popping Welcome Note -->
+        <section id="hero">
+            <h1>Welcome to My Page</h1>
+            <p>Passionate Data Scientist | Problem Solver | Data Enthusiast</p>
+        </section>
+
+<!-- Container for the centered tiles -->
+        <div id="centered-tiles">
+            <div class="tile"> <!-- Tile 1 -->
+                <h3>About</h3>
+                <p>Learn more about me and my journey in data science. Discover my background, interests, and what drives my passion for data.</p>
+            </div>
+            
+            <div class="tile"> <!-- Tile 2 -->
+                <h3>Projects</h3>
+                <p>Explore a diverse collection of my data science projects, each demonstrating my expertise in data analysis, machine learning, and data visualization.</p>
+            </div>
+
+            <div class="tile"> <!-- Tile 3 -->
+                <h3>Articles</h3>
+                <p>Stay updated with my latest data science articles, tutorials, and insights. Explore a world of knowledge and discovery in data science.</p>
+            </div>
+        </div>
+
+        <!-- Navigation arrows and button to reveal the 4th tile -->
+        <div id="scroll-buttons">
+            <button id="prev-button" onclick="scrollLeft()">&#9665;</button> <!-- Left arrow -->
+            <button id="next-button" onclick="scrollRight()">&#9655;</button> <!-- Right arrow -->
+            <button id="reveal-button" onclick="revealFourthTile()">Reveal 4th Tile</button>
+        </div>
+                    
+
+
+<!-- Rest of the content for the homepage -->
+        <footer style="margin-top: 10px;">
+            <p>&copy; 2023 Muqesh-DataScientist</p>
+        </footer>
+        
+    </body>
+</html>
