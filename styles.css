@@ -20,17 +20,16 @@ header {
     left: 0;
     right: 0;
 }
-
 footer {
-    text-align: center; /* Center the text within the footer */
-    position: fixed;
+    text-align: center;
     bottom: 0;
     left: 0;
     right: 0;
-    margin-top: 100px;
+    margin: 20px 0;
 }
 
-/* Nav Manu Bar */
+
+/* --------------------------------------------- Nav Manu Bar ------------------------------------ */
 nav {
     display: flex;
     justify-content: space-between;
@@ -74,8 +73,7 @@ section {
     transform: translate(50%, -50%); /* Center the image vertically */
 }
 
-/* Define the styles for alternating dark and light sections */
-
+/* --------------------------------------------- Introduction ---------------------------------*/
 .content-container {
     display: flex;
     justify-content: center; /* Center-align child elements horizontally */
@@ -89,7 +87,6 @@ section {
     text-align: center;
     padding : 1% 20%;
 }
-
 /* Define a CSS keyframe animation for typing effect */
 @keyframes typing {
     from {
@@ -102,29 +99,121 @@ section {
     }
   }    
 .introduction h3 {
+    text-align: center;
     overflow: hidden; 
     white-space: nowrap;
     width: 100%; 
-    animation: typing 5s steps(50) infinite; 
+    animation: typing 6s steps(40) infinite, blink-caret 01.5s step-end infinite;
     font-size: 40px;
-    padding : 2% 20%;
+    padding : 2% 0%;
     }  
 .introduction p{
     font-size: 20px;
 }
-  
-.data-text {
+
+/* --------------------------------------------- Data Section ------------------------------*/
+.data-text {    
     flex: 1; 
-    text-align: left; 
     color: #333;
-
+    padding-left: 10%;
+    padding-right: 5%;
+    font-size: 20px;
 }
-
 .data-img {
     flex: 1; 
     text-align: right; 
 }
+.data-text p{
+    text-indent: 3em;
+}
 
+/* ---------------------------------------------- Research ----------------------------------*/
+.research-img {
+    flex: 1; /* Take up 50% of the available width */
+    padding: 0 10px; /* Add some spacing to the image */
+}
+.research-text {
+    flex: 1; /* Take up 50% of the available width */
+    padding-left: 5%;
+    padding-right: 10%;
+    font-size: 20px;
+}
+.research-text h3 {
+    font-size: 24px;
+    color: #333;
+
+}
+.research-text p {
+    color: #333;
+    text-indent: 3em;
+}
+
+/* ---------------------------------------------- Analysis Section ----------------------------- */
+.analysis-text {
+    flex: 1; 
+    color: #333;
+    padding-left: 10%;
+    padding-right: 5%;
+    font-size: 20px;
+}
+.analysis-text h3{
+    font-size: 24px;
+    color: #333;
+}
+.analysis-text p{
+    color: #333;
+    text-indent: 3em;
+}
+.analysis-img {
+    flex: 1; 
+    /* float: left; */
+    text-align: right; 
+}
+
+/* ------------------------------------------------- TeamWork ---------------------------------------- */
+.teamwork-img {
+    flex: 1; /* Take up 50% of the available width */
+    padding: 0 10px; /* Add some spacing to the image */
+}
+.teamwork-text {
+    flex: 1; /* Take up 50% of the available width */
+    padding-left: 5%;
+    padding-right: 10%;
+    font-size: 20px;
+}
+.teamwork-text h3 {
+    font-size: 24px;
+    color: #333;
+
+}
+.teamwork-text p {
+    color: #333;
+    text-indent: 3em;
+}
+
+/* ------------------------------------------------- Deployment ---------------------------------------- */
+
+.deployment-text {
+    flex: 1; 
+    color: #333;
+    padding-left: 10%;
+    padding-right: 5%;
+    font-size: 20px;
+}
+.deployment-text h3{
+    font-size: 24px;
+    color: #333;
+}
+.deployment-text p{
+    color: #333;
+    text-indent: 3em;
+}
+.deployment-img {
+    flex: 1; 
+    text-align: right; 
+}
+
+/* ---------------------------------------------------------------------------------- */
 .dark-section {
     padding-left: 50%;
     background-color: #edf4f5;
@@ -138,7 +227,6 @@ section {
     color: #333;
     text-align: left; /* Align content to the left in light sections */
 }
-
 
 
 
