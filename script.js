@@ -1,15 +1,9 @@
-function scrollLeft() {
-    const scrollContainer = document.getElementById('scroll-container');
-    scrollContainer.scrollLeft -= 300; // Adjust the scroll distance as needed
-}
+const checkbox = document.querySelector('.my-form input[type="checkbox"]');
+const btns = document.querySelectorAll(".my-form button");
 
-function scrollRight() {
-    const scrollContainer = document.getElementById('scroll-container');
-    scrollContainer.scrollLeft += 300; // Adjust the scroll distance as needed
-}
-
-function revealFourthTile() {
-    const scrollContainer = document.getElementById('scroll-container');
-    scrollContainer.style.scrollBehavior = 'smooth';
-    scrollContainer.scrollLeft += 300; // Adjust the scroll distance as needed
-}
+checkbox.addEventListener("change", function() {
+  const checked = this.checked;
+  for (const btn of btns) {
+    checked ? (btn.disabled = false) : (btn.disabled = true);
+  }
+});
