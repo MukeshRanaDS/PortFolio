@@ -2,26 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mukesh - Data Science Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Muqesh - Data Science Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html"><div class="logo">Muqesh</div></a>
-            <ul class="nav-links">
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Articles</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <!-- ---------------------------------------------------- Header Section -------------------------------------------- -->
+    <header class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand mr-auto" href="index.html">Muqesh</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-
+    <!-- ---------------------------------------------------- Contact Section -------------------------------------------- -->
     <section class="footer_get_touch_outer">
         <div class="container">
             <div class="footer_get_touch_inner grid-70-30">
@@ -30,15 +38,15 @@
                         <div class="get_form_inner_text">
                             <h3>Get In Touch</h3>
                         </div>
-                        <form action="#">
+                        <form id="contactForm">
                             <div class="grid-50-50">
-                                <input type="text" placeholder="First Name">
-                                <input type="text" placeholder="Last Name">
-                                <input type="email" placeholder="Email">
-                                <input type="tel" placeholder="Phone/Skype">
+                                <input type="text" placeholder="First Name" required>
+                                <input type="text" placeholder="Last Name" required>
+                                <input type="email" placeholder="Email" required>
+                                <input type="tel" placeholder="Phone/Skype" required>
                             </div>
                             <div class="grid-full">
-                                <textarea placeholder="About Your Project" cols="30" rows="10"></textarea>
+                                <textarea placeholder="About Your Project" cols="30" rows="10" required></textarea>
                                 <input type="submit" value="Submit">
                             </div>
                         </form>
@@ -49,18 +57,21 @@
                     <ul class="get_say_info_sec">
                         <li>
                             <i class="fa fa-envelope"></i>
-                            <a href="mailto:info@stackfindover.com">mukeshrana.cds15@iiitb.net</a>
+                            <span class="tooltip" id="emailTooltip">To view mail-ID, please submit the form</span>
+                            <a href="mailto:mukeshrana.cds15@iiitb.net" id="emailLink">mukesh****.cds**@iiitb.net</a>
                         </li>
                         <li>
                             <i class="fa fa-whatsapp"></i>
-                            <a href="tel:+919602381997">+91 869&##9419</a>
+                            <span class="tooltip" id="phoneTooltip">To view contact number, please submit the form</span>
+                            <a href="tel:+911234556789" id="phoneLink">+91 ******6789</a>
                         </li>
                         <li>
                             <i class="fa fa-skype"></i>
-                            <a href="#">mukeshrana54</a>
+                            <span class="tooltip" id="skypeTooltip">To view skype ID, please submit the form</span>
+                            <a href="#" id="skypeLink" id="skypeLink">mukesh******</a>
                         </li>
                     </ul>
-                    <ul class="get_say_social-icn">
+                        <ul class="get_say_social-icn">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -70,39 +81,121 @@
             </div>
         </div>
     </section>
-    
     <script>
-        function hideContactInfo() {
-            // Replace email content
-            var emailContent = "info@stackfindover.com";
-            var emailElement = document.querySelector(".get_say_info_sec li:nth-child(1) a");
-            emailElement.textContent = emailContent.replace(/(?<=@).*/g, "**");
-            
-            // Replace phone content
-            var phoneContent = "+91 9602381997";
-            var phoneElement = document.querySelector(".get_say_info_sec li:nth-child(2) a");
-            phoneElement.textContent = phoneContent.replace(/\d(?=\d{4})/g, "*");
-
-            // Show the "Form Submitted" pop-up notification
-            alert("Form Submitted");
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
-            var form = document.querySelector("form");
+            var form = document.querySelector("#contactForm");
+            var emailLink = document.getElementById("emailLink");
+            var phoneLink = document.getElementById("phoneLink");
+            var skypeLink = document.getElementById("skypeLink");
+            var emailTooltip = document.getElementById("emailTooltip");
+            var phoneTooltip = document.getElementById("phoneTooltip");
+            var skypeTooltip = document.getElementById("skypeTooltip");
+    
             form.addEventListener("submit", function (event) {
                 event.preventDefault(); // Prevents the default form submission
-                hideContactInfo(); // Call function to hide sensitive data and show the "Form Submitted" pop-up
+    
+                // Hide sensitive data
+                hideContactInfo();
+    
+                // Show the "Form Submitted" pop-up notification
+                alert("Form Submitted");
+    
+                // Disable tooltips after form submission
+                disableTooltips();
             });
+    
+            function hideContactInfo() {
+                // Replace email content
+                var emailContent = "mukeshrana.cds15@iiitb.net";
+                emailLink.textContent = emailContent;
+    
+                // Replace phone content
+                var phoneContent = "+911234556789";
+                phoneLink.textContent = phoneContent;
+    
+                // Replace Skype content
+                var skypeContent = "mukeshrana54";
+                skypeLink.textContent = skypeContent;
+            }
+    
+            function disableTooltips() {
+                emailTooltip.style.visibility = "hidden";
+                emailTooltip.style.opacity = "0";
+                phoneTooltip.style.visibility = "hidden";
+                phoneTooltip.style.opacity = "0";
+                skypeTooltip.style.visibility = "hidden";
+                skypeTooltip.style.opacity = "0";
+            }
         });
     </script>
+            
 
-
-    <section>
-        <div>
-            <footer>
-                <p>&copy; 2023 Muqesh-DataScientist</p>
-            </footer>
+    <!-- ---------------------------------------------------- Footer Section -------------------------------------------- -->
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">HOME</a></li>
+                        <li><a href="projects.html" class="text-white">PROJECTS</a></li>
+                        <li><a href="about.html" class="text-white">ABOUT Me</a></li>
+                        <li><a href="blog.html" class="text-white">ARTICLES</a></li>
+                        <li><a href="contact.html" class="text-white">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#FACEBOOK" class="text-white">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x "></i>
+                                </span>
+                                FACEBOOK
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#TWITTER" class="text-white">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x "></i>
+                                </span>
+                                TWITTER
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#LINKED IN" class="text-white">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                                </span>
+                                LINKED IN
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h6>GET IN TOUCH :</h6>
+                    <div class="traingle_div">
+                        <a href="contact.html" class="btn btn-info btn-arrow-right">GET IN TOUCH</a>
+                        <a href="contact.html" class="btn btn-transparent">LET'S GO</a>
+                    </div>
+                    <div class="pad_bot"></div>
+                    <div class="pad_bot"></div>
+                    <address class="text-white">
+                        <p>+91 1234567890 | mukeshrana.cds15@iiitb.net</p>
+                        <p>Bangalore/Bengaluru, KA, India</p>
+                    </address>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="pad_bot"></div>
+                    <div class="center">
+                        <p class="text-white">PRIVACY POLICY</p>
+                        <p class="text-white copyright">&copy; 2020 Muqesh-DataScientist</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </footer>
 </body>
 </html>

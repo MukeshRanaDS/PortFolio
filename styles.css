@@ -1,378 +1,844 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 body {
-    font-family: Arial, sans-serif;
-    margin-top: 40px;
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
 }
 
+/* ------------------------------------------------ Header ------------------------------------------- */
+header.navbar {
+  padding-top: 8px; /* Adjust top padding */
+  padding-bottom: 8px; /* Adjust bottom padding */
+}
+.navbar-nav .nav-link {
+  font-size: 16px; /* Adjust the font size of the navigation links */
+}
+.navbar-brand {
+  font-size: 35px; 
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
 header {
-    background-color: #333;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
+  background-color: #333;
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-footer {
-    text-align: center;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 20px 0;
+/* -------------------------------------------------- Profile Picture --------------------------------------------- */
+#banner-container {
+  height: 60vh; /* Set the container height to 80% of the viewport height on larger screens */
 }
 
-
-/* --------------------------------------------- Nav Manu Bar ------------------------------------ */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#banner-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 1cm;
-    color: #ffffff;
-    text-decoration: underline;
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  #banner-container {
+      height: 50vh; /* Set the container height to 100% of the viewport height on smaller screens */
+  }
+}
+/* -------------------------------------------------- Introduction section--------------------------------------------- */
+.introduction-section {
+  background-color: #edf4f5;
+  color: #fff;
+  padding: 2% 0;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+.introduction {
+  height: 200px;
+  color: #333;
+  text-align: center;
+  padding: 1% 20%;
 }
 
-.nav-links li {
-    margin-right: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff;
-}
-
-section {
-    margin: -4px;
-}
-
-.profile-image {
-    position: absolute;
-    top: 50%;
-    right: 50px; /* Adjust the right position as needed */
-    width: 200px;
-    border-radius: 50%;
-    transform: translate(50%, -50%); /* Center the image vertically */
-}
-
-/* --------------------------------------------- Introduction ---------------------------------*/
-.content-container {
-    display: flex;
-    justify-content: center; /* Center-align child elements horizontally */
-    align-items: center; /* Center-align child elements vertically */
-    background-color: #edf4f5; /* Background color for the section */
-    color: #fff; /* Text color for the section */
-}
-.introduction{
-    height: 200px;
-    color: #333;
-    text-align: center;
-    padding : 1% 20%;
-}
-/* Define a CSS keyframe animation for typing effect */
 @keyframes typing {
-    from {
+  from {
       width: 0;
       margin: 0 auto;
-    }
-    to {
+  }
+  to {
       width: 100%;
       margin: 0 auto;
-    }
-  }    
+  }
+}
+
 .introduction h3 {
-    text-align: center;
-    overflow: hidden; 
-    white-space: nowrap;
-    width: 100%; 
-    animation: typing 6s steps(40) infinite, blink-caret 01.5s step-end infinite;
-    font-size: 40px;
-    padding : 2% 0%;
-    }  
-.introduction p{
-    font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  animation: typing 3s steps(40) infinite, blink-caret 1.5s step-end infinite;
+  font-size: 40px;
 }
 
-/* --------------------------------------------- Data Section ------------------------------*/
-.data-text {    
-    flex: 1; 
-    color: #333;
-    padding-left: 10%;
-    padding-right: 5%;
-    font-size: 20px;
+.introduction p {
+  font-size: 20px;
 }
+
+/* Responsive styles for Introduction Section */
+@media (max-width: 768px) {
+  .introduction {
+      padding: 5% 10%;
+  }
+
+  .introduction h3 {
+      font-size: 30px;
+  }
+
+  .introduction p {
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .introduction {
+      padding: 10% 5%;
+  }
+
+  .introduction h3 {
+      font-size: 24px;
+  }
+
+  .introduction p {
+      font-size: 16px;
+  }
+}
+
+/* -------------------------------------------------- Data Section --------------------------------------------- */
+.data-section {
+  background-color: #edf4f5;
+  padding: 2% 0;
+}
+
+.data-text {
+  color: #333;
+  font-size: 20px;
+  max-width: 500px;
+  margin: 0 auto; /* Center the text horizontally */
+}
+
+.data-text p {
+  text-indent: 3em;
+}
+
 .data-img {
-    flex: 1; 
-    text-align: right; 
-}
-.data-text p{
-    text-indent: 3em;
+  text-align: center;
 }
 
-/* ---------------------------------------------- Research ----------------------------------*/
-.research-img {
-    flex: 1; /* Take up 50% of the available width */
-    padding: 0 10px; /* Add some spacing to the image */
-}
-.research-text {
-    flex: 1; /* Take up 50% of the available width */
-    padding-left: 5%;
-    padding-right: 10%;
-    font-size: 20px;
-}
-.research-text h3 {
-    font-size: 24px;
-    color: #333;
-
-}
-.research-text p {
-    color: #333;
-    text-indent: 3em;
+.oval-image {
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
 }
 
-/* ---------------------------------------------- Analysis Section ----------------------------- */
-.analysis-text {
-    flex: 1; 
-    color: #333;
-    padding-left: 10%;
-    padding-right: 5%;
-    font-size: 20px;
-}
-.analysis-text h3{
-    font-size: 24px;
-    color: #333;
-}
-.analysis-text p{
-    color: #333;
-    text-indent: 3em;
-}
-.analysis-img {
-    flex: 1; 
-    /* float: left; */
-    text-align: right; 
-}
-
-/* ------------------------------------------------- TeamWork ---------------------------------------- */
-.teamwork-img {
-    flex: 1; /* Take up 50% of the available width */
-    padding: 0 10px; /* Add some spacing to the image */
-}
-.teamwork-text {
-    flex: 1; /* Take up 50% of the available width */
-    padding-left: 5%;
-    padding-right: 10%;
-    font-size: 20px;
-}
-.teamwork-text h3 {
-    font-size: 24px;
-    color: #333;
-
-}
-.teamwork-text p {
-    color: #333;
-    text-indent: 3em;
-}
-
-/* ------------------------------------------------- Deployment ---------------------------------------- */
-
-.deployment-text {
-    flex: 1; 
-    color: #333;
-    padding-left: 10%;
-    padding-right: 5%;
-    font-size: 20px;
-}
-.deployment-text h3{
-    font-size: 24px;
-    color: #333;
-}
-.deployment-text p{
-    color: #333;
-    text-indent: 3em;
-}
-.deployment-img {
-    flex: 1; 
-    text-align: right; 
-}
-
-/* ---------------------------------------------------------------------------------- */
-.dark-section {
-    padding-left: 50%;
-    background-color: #edf4f5;
-    color: #fff;
-    align: right; /* Align content to the right in dark sections */
-}
-
-.light-section {
-    padding-right: 50%;
-    background-color: #f7e9ec;
-    color: #333;
-    text-align: left; /* Align content to the left in light sections */
-}
-
-/* ------------------------------------------------ Contact Page -------------------------------*/
-* {
-    padding: 0;
+/* Responsive styles for Data Section */
+@media (max-width: 768px) {
+  .data-text {
+    max-width: none;
+    text-align: center;
     margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
   }
-  body {
-    background: #f2f4f6;
-  }
-  .footer_get_touch_outer {
-    margin-top: 80px;
-  }
-  .container {
-    width: 95%;
-    max-width: 1140px;
-    margin: auto;
-  }
-  .grid-70-30 {
-    display: grid;
-    grid-template-columns: 70% 30%;
-  }
-  .get_form_inner {
-    display: block;
-    padding: 50px 40px;
-    background: #fff;
-    box-shadow: -4px -2px 20px -7px #cfd5df;
-  }
-  input[type="text"], input[type="text"], input[type="email"], input[type="tel"] {
-    border: 1px solid #dbdbdb;
-    border-radius: 2px;
-    color: #333;
-    height: 42px;
-    padding: 0 0 0 20px;
-    width: 100%;
-    outline: 0;
-  }
-  .grid-50-50 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
-  .grid-full {
-    margin: 20px 0;
-  }
-  textarea {
-    border: 1px solid #dbdbdb;
-    border-radius: 2px;
-    color: #333;
-    padding: 12px 0 0 20px;
-    width: 100%;
-    outline: 0;
+
+  .data-img {
+    text-align: center;
     margin-bottom: 20px;
   }
-  .get_form_inner_text h3 {
-    color: #333;
-    font-size: 26px;
-    font-weight: 600;
-    margin-bottom: 40px;
-  }
-  input[type="submit"] {
-    display: inline-block;
-    font-size: 16px;
-    text-transform: uppercase;
-    background: transparent;
-    border: 2px solid;
-    font-weight: 500;
-    padding: 10px 20px;
-    outline: 0;
-    cursor: pointer;
-    color: #103e65;
-    transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    -webkit-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    -moz-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    -ms-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    -o-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  input[type="submit"]:hover {
-    background-color: #f85508;
-    border-color: #f85508;
-    color: #fff;
-  }
-  .get_say_form {
-    display: inline-block;
-    padding: 45px 0 25px 30px;
-    background: #103e65;
-    position: relative;
-  }
-  .get_say_form h5 {
-    color: #fff;
-    font-size: 26px;
-    margin: 0 0 40px;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .get_say_social-icn {
-    display: flex;
-    position: absolute;
-    bottom: 40px;
-  }
-  .get_say_social-icn a {
-    font-size: 22px;
-    color: #fff;
-    padding: 0 20px 0 0;
-  }
-  .get_say_info_sec i {
-    color: #fff;
-    font-size: 30px;
-  }
-  .get_say_info_sec > li {
-    display: grid;
-    grid-template-columns: 30px auto;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  .get_say_info_sec > li a {
-    width: 100%;
-    display: block;
-    padding: 15px 25px;
-    color: #fff;
-    font-size: 16px;
-    text-decoration: unset;
-    font-weight: 500;
-    background: #162b65;
-    border-radius: 5px 0 0 5px;
-    transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    -webkit-transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    -moz-transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    -ms-transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    -o-transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  .get_say_info_sec > li a:hover {
-    background-color: #f85508;
+
+  .oval-image {
+    margin-right: 0;
   }
 
-/* ---------------------------------------------- */
-#about, #projects, #contact {
-    text-align: center;
+  .data-text {
+    font-size: 18px;
+  }
+
+  .data-text p {
+    font-size: 16px;
+  }
 }
 
-.project {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
+/* -------------------------------------------------- Research --------------------------------------------- */
+.research-section{
+  background-color: #edf4f5;
+  padding: 2% 0;
+}
+.research-text {
+  color: #333;
+  font-size: 20px;
+  max-width: 500px;
+  margin: 0 auto; /* Center the text horizontally */
+}
+
+.research-text p {
+  text-indent: 3em;
+}
+
+.research-img {
+  text-align: center;
+}
+
+/* Apply border-radius to create an oval shape */
+.oval-image img {
+  border-radius: 50%;
+}
+
+/* Responsive styles for Research Section */
+@media (max-width: 768px) {
+  .research-text {
+    max-width: none;
+    text-align: center;
+    margin: 0;
+  }
+
+  .research-img {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .oval-image {
+    margin-right: 0;
+  }
+
+  .research-text {
+    font-size: 18px;
+  }
+
+  .research-text p {
+    font-size: 16px;
+  }
+}
+
+/* -------------------------------------------------- Analysis Section --------------------------------------------- */
+.analysis-section{
+  background-color: #edf4f5;
+  padding: 2% 0;
+}
+
+.analysis-text {
+  color: #333;
+  font-size: 20px;
+  max-width: 500px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the text horizontally */
+}
+
+.analysis-text h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.analysis-text p {
+  color: #333;
+  text-indent: 3em;
+}
+
+.analysis-img {
+  text-align: center; /* Center the image horizontally */
+}
+
+/* Apply border-radius to create an oval shape */
+.oval-image {
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block; /* Align the image and text horizontally */
+}
+
+/* Responsive styles for Analysis Section */
+@media (max-width: 768px) {
+  .analysis-text {
+    max-width: none; /* Remove max-width for smaller screens */
+    text-align: center; /* Center the text for smaller screens */
+    margin: 0; /* Remove horizontal margin */
+  }
+
+  .analysis-img {
+    text-align: center; /* Center the image horizontally for smaller screens */
+    margin-bottom: 20px; /* Add some spacing between text and image */
+  }
+
+  .oval-image {
+    margin-right: 0; /* Remove margin for smaller screens */
+  }
+
+  /* Adjust font sizes for smaller screens while keeping them consistent */
+  .analysis-text {
+    font-size: 18px;
+  }
+
+  .analysis-text p {
+    font-size: 16px;
+  }
+}
+
+/* -------------------------------------------------- Teamwork Section --------------------------------------------- */
+.teamwork-section{
+  background-color: #edf4f5;
+  padding: 2% 0;
+}
+.teamwork-text {
+  color: #333;
+  font-size: 20px;
+  max-width: 500px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the text horizontally */
+}
+
+.teamwork-text h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.teamwork-text p {
+  color: #333;
+  text-indent: 3em;
+}
+
+.teamwork-img {
+  text-align: center; /* Center the image horizontally */
+}
+
+/* Apply border-radius to create an oval shape */
+.oval-image {
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block; /* Align the image and text horizontally */
+}
+
+/* Responsive styles for Teamwork Section */
+@media (max-width: 768px) {
+  .teamwork-text {
+    max-width: none; /* Remove max-width for smaller screens */
+    text-align: center; /* Center the text for smaller screens */
+    margin: 0; /* Remove horizontal margin */
+  }
+
+  .teamwork-img {
+    text-align: center; /* Center the image horizontally for smaller screens */
+    margin-bottom: 20px; /* Add some spacing between text and image */
+  }
+
+  .oval-image {
+    margin-right: 0; /* Remove margin for smaller screens */
+  }
+
+  /* Adjust font sizes for smaller screens while keeping them consistent */
+  .teamwork-text {
+    font-size: 18px;
+  }
+
+  .teamwork-text p {
+    font-size: 16px;
+  }
+}
+/* -------------------------------------------------- Deployement Section --------------------------------------------- */
+.deployment-section{
+  background-color: #edf4f5;
+  padding: 2% 0;
+}
+.deployment-text {
+  color: #333;
+  font-size: 20px;
+  max-width: 500px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the text horizontally */
+}
+
+.deployment-text h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.deployment-text p {
+  color: #333;
+  text-indent: 3em;
+}
+
+.deployment-img {
+  text-align: center; /* Center the image horizontally */
+}
+
+/* Apply border-radius to create an oval shape */
+.oval-image {
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block; /* Align the image and text horizontally */
+}
+
+/* Responsive styles for Deployment Section */
+@media (max-width: 768px) {
+  .deployment-text {
+    max-width: none; /* Remove max-width for smaller screens */
+    text-align: center; /* Center the text for smaller screens */
+    margin: 0; /* Remove horizontal margin */
+  }
+
+  .deployment-img {
+    text-align: center; /* Center the image horizontally for smaller screens */
+    margin-bottom: 20px; /* Add some spacing between text and image */
+  }
+
+  .oval-image {
+    margin-right: 0; /* Remove margin for smaller screens */
+  }
+
+  /* Adjust font sizes for smaller screens while keeping them consistent */
+  .deployment-text {
+    font-size: 18px;
+  }
+
+  .deployment-text p {
+    font-size: 16px;
+  }
+}
+
+/* -------------------------------------------------- Contact Page --------------------------------------------- */
+.footer_get_touch_outer {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.container {
+  width: 95%;
+  max-width: 1140px;
+  margin: auto;
+}
+.grid-70-30 {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+.get_form_inner {
+  display: block;
+  padding: 50px 40px;
+  background: #fff;
+  box-shadow: -4px -2px 20px -7px #cfd5df;
+}
+input[type="text"],
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  color: #333;
+  height: 42px;
+  padding: 0 0 0 20px;
+  width: 100%;
+  outline: 0;
+}
+.grid-50-50 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.grid-full {
+  margin: 20px 0;
+}
+textarea {
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  color: #333;
+  padding: 12px 0 0 20px;
+  width: 100%;
+  outline: 0;
+  margin-bottom: 20px;
+}
+.get_form_inner_text h3 {
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+input[type="submit"] {
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid;
+  font-weight: 500;
+  padding: 10px 20px;
+  outline: 0;
+  cursor: pointer;
+  color: #103e65;
+  transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -moz-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -ms-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -o-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+input[type="submit"]:hover {
+  background-color: #f85508;
+  border-color: #f85508;
+  color: #fff;
+}
+.colmun-30 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.get_say_form {
+  display: inline-block;
+  padding: 45px 0 25px 30px;
+  background: #103e65;
+  position: relative;
+}
+.get_say_form h5 {
+  color: #fff;
+  font-size: 26px;
+  margin: 0 0 40px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.get_say_social-icn {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+}
+.get_say_social-icn a {
+  font-size: 22px;
+  color: #fff;
+  padding: 0 20px 0 0;
+}
+.get_say_info_sec {
+  margin-left: -25px;
+  display: flex;
+  flex-direction: column;
+}
+.get_say_info_sec i {
+  color: #fff;
+  font-size: 30px;
+}
+.get_say_info_sec > li {
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.get_say_info_sec > li a {
+  width: 90%;
+  display: block;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: unset;
+  font-weight: 500;
+  background: #162b65;
+  border-radius: 5px 0 0 5px;
+  transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -moz-transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -ms-transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -o-transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.get_say_info_sec > li a:hover {
+  background-color: #f85508;
+}
+.get_say_info_sec > li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the text */
+  left: 50%;
+  margin-left: -100px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.get_say_info_sec > li:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive Styles for Contact Section */
+@media screen and (max-width: 768px) {
+  .footer_get_touch_inner {
+      display: block;
+  }
+
+  .colmun-70,
+  .colmun-30 {
+      width: 90%;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+  }
+  .get_say_form h5 {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+  .get_form_inner {
+      margin-bottom: 20px;
+  }
+}
+
+/* -------------------------------------------------- Footer --------------------------------------------- */
+.footer_container{
+  margin-top: 100px;
+}
+button {
+  letter-spacing: 1px;
+  box-shadow: 0 8px 20px -10px
+}
+.btn {
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+}
+footer .btn {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 12px;
+  box-shadow: none;
+}
+.pad_right {
+  padding-right: 10px;
+}
+.contact_button {
+  background-color: #71bae8;
+}
+.quote_button {
+  background-color: #026892;
+}
+.solutions {
+  background-color: #d14f2f;
+}
+.btn:hover {
+  background-color: #f1c709;
+}
+.large_buttons {
+  padding-left: 0px;
+}
+.large_buttons li button {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 18px;
+  text-align: left;
+  	font-weight: 600;
+}
+.large_buttons li button i {
+  color:white;
+  font-size: 31px;
+}
+.pad_top {
+  padding-top: 30px;
+}
+.btn-arrow-right,
+.btn-arrow-left {
+  position: relative;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.btn-arrow-right {
+  padding-left: 10px;
+  background-color: #8c8e90;
+  color: #272727;
+  font-weight: 600;
+}
+.btn-arrow-right:after, .btn-arrow-left:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 22px;
+  height: 22px;
+  background: inherit;
+  border: inherit;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 0px 4px 0px 0px;
+  -webkit-border-radius: 0px 4px 0px 0px;
+  -moz-border-radius: 0px 4px 0px 0px;
+}
+.btn-arrow-right:after {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+.btn-arrow-left:before, .btn-arrow-left:after {
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+}
+.btn-arrow-right:after,
+.btn-arrow-left:after {
+  right: -11px;
+}
+.btn-arrow-right:after,
+.btn-arrow-left:before {
+  z-index: 1;
+}
+.btn-arrow-left:after {
+  background-color: white;
+}
+.traingle_div {
+  background-color: #59595a;
+}
+.btn-transparent {
+  color: #272727;
+  background-color: transparent;
+  font-weight: 600;
+  padding: 12px;
+}
+.btn-transparent:hover {
+  background-color: #59595a;
+  color: #fff;
+}
+footer {
+  background-color: #272727;
+  color: #8b8e90;
+  padding: 30px 0px;
+  font-weight: 600;
+  font-size: 13px;
+}
+footer a:hover {
+  color: #fff;
+}
+footer h6 {
+  font-weight: 700;
+}
+footer li a {
+  color: inherit;
+}
+.footer_first_ul {
+  list-style-type: none;
+  text-align: left;
+}
+.list-unstyled li {
+  padding-bottom: 10px;
+}
+.footer_second_ul li {
+  padding-bottom: 10px;
+
+}
+.footer_second_ul li i.fa-stack-1x {
+  color: #282828;
+}
+.center {
+  text-align: center;
+}
+.circle {
+  border-radius: 50%;
+}
+.awards {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 60%;
+}
+#dotted_line {
+  width: 100%;
+  height: 7px;
+  margin: 10px auto 4px;
+  padding-bottom: 5px;
+  background: url('color_block.png') repeat-x;
+}
+.copyright {
+  font-size: 10px;
+}
+.btn:active,
+.btn:focus {
+  border: none;
+}
+@media (min-width: 768px) {
+  .navbar.navbar-lower .navbar-nav {
+      margin-left: 100px;
+  }
+}
+@media (max-width: 1024px) {
+  .large-8 {
+      width: 100%;
+  }
+  #navbar a {
+      padding-right: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-upper {
+      display: none;
+  }
+  .navbar-logo img {
+      top: 7%;
+  }
+  img {
+      width: 100%;
+  }
+  .navbar-nav {
+      border: none;
+  }
+  article {
+      padding-bottom: 30px;
+  }
+  .article_post img {
+      padding-bottom: 20px;
+  }
+  footer ul {
+      padding: 20px 0px;
+      border-bottom: 1px solid;
+  }
+  .awards {
+      margin-left: inherit !important;
+      margin-right: inherit !important;
+  }
+  footer .center {
+      text-align: center;
+  }
+  .btn-transparent {
+      padding: 30px;
+  }
+}
+
+
+
+/* ------------------------------------------ Under Construction -------------------------------------------- */
+.under-construction {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8d7da; 
+    color: #721c24; 
+    margin-bottom: 20px;
+}
+
+.under-construction h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.under-construction p {
+    font-size: 18px;
+    margin: 0;
 }

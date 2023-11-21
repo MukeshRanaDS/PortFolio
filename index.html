@@ -1,100 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Muqesh - Data Science Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="index.html"><div class="logo">Muqesh</div></a>
-                <ul class="nav-links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Atricles</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Muqesh - Data Science Portfolio</title>
+</head>
+<body>
+    <!-- ---------------------------------------------------- Header Section -------------------------------------------- -->
+    <header class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand mr-auto" href="index.html">Muqesh</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
+    <!-- ---------------------------------------------------- Profile picture Section -------------------------------------------- -->
+    <section>
+        <div id="banner-container">
+            <img src="image/banner4.png" class="img-fluid" alt="Banner Image">
+        </div>
+    </section>
 
-<!-- Profile Banner -->
-        <section>
-            <div id="banner-container">
-                <img src="image/banner4.png" style="width: 100%; max-width: 100%;" />
-            </div>     
-        </section>
+    <!-- ---------------------------------------------------- Introduction Section -------------------------------------------- -->
 
-<!-- Data section -->
-        <section>
-            <div class="content-container">
-                <div class="introduction">
+    <section class="container-fluid introduction-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 introduction">
                     <h3>
-                        <span class="typing-animation">What makes a project successful?</span>
+                        <span class="typing-animation start-typing">What makes a project successful?</span>
                     </h3>
-                    <p> "Data Science: The Art of Extracting Insights. 
-                        In the world of data, Data Science is the artist. 
-                        It transforms raw data into insights, unlocking secrets, and driving decisions. 
+                    <p>
+                        "Data Science: The Art of Extracting Insights. In the world of data, Data Science is the artist.
+                        It transforms raw data into insights, unlocking secrets, and driving decisions.
                         From predicting trends to uncovering hidden patterns, Data Science paints a clearer picture of the future."
                     </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-<!-- Data section -->
-        <section>
-            <div class="content-container">
-                <div class="data-text">
-                    <h3>
-                        1. Clean Data
-                    </h3>
+    <!-- ---------------------------------------------------- Data Section -------------------------------------------- -->
+    <section class="container-fluid data-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 data-text">
+                    <h3>1. Clean Data</h3>
                     <p>
-                        Clean data is the backbone of data science, ensuring quality and reliability. 
-                        Errors in data can lead to flawed conclusions, making clean data essential for sound decision-making. 
+                        Clean data is the backbone of data science, ensuring quality and reliability.
+                        Errors in data can lead to flawed conclusions, making clean data essential for sound decision-making.
                     </p>
                     <p>
-                        It saves time by reducing the need for preprocessing, 
+                        It saves time by reducing the need for preprocessing,
+                        allowing data scientists to focus on analysis and effective visualization.
+                    </p>
+                    <p>
+                        It saves time by reducing the need for preprocessing,
                         allowing data scientists to focus on analysis and effective visualization.
                     </p>
                 </div>
-                <div class="data-img">
-                    <img src="image/data.jpg" style="width: 100%; max-width: 100%;"/>
+                <div class="col-md-6 data-img">
+                    <!-- Apply oval shape to the image -->
+                    <div class="oval-image">
+                        <img src="image/data.jpg" class="img-fluid" alt="Data Image">
+                    </div>
                 </div>
             </div>
-        </section>
-
-<!-- Research Section -->
-        <section>
-            <div class="content-container">
-                <div class="research-img">
-                    <img src="image/research.jpg" style="width: 100%; max-width: 100%;" />
+        </div>
+    </section>
+        
+    <!-- ---------------------------------------------------- Research Section -------------------------------------------- -->
+    <section class="container-fluid research-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 order-2 order-md-1 research-img">
+                    <!-- Apply oval shape to the image -->
+                    <div class="oval-image">
+                        <img src="image/research.jpg" class="img-fluid" alt="Research Image">
+                    </div>
                 </div>
-
-                <div class="research-text">
-                    <h3>
-                        2. Data Research
-                    </h3>
+                <div class="col-md-6 order-1 order-md-2 research-text">
+                    <h3>2. Data Research</h3>
                     <p>
-                        Data research in data science involves the systematic investigation of datasets to discover valuable insights,
-                         trends, and patterns. 
-
+                        Data research in data science involves the systematic investigation of datasets to discover valuable insights, trends, and patterns.
                     </p>
                     <p>
                         It's the foundation for informed decision-making and model development.
                     </p>
                 </div>
             </div>
-        </section>
-        
+        </div>
+    </section>
 
-<!-- Analysis Section -->
-        <section>
-            <div class="content-container">
-                <div class="analysis-text">
-                    <h3>
-                        3. Data Analysis
-                    </h3>
+    <!-- ---------------------------------------------------- Analysis Section -------------------------------------------- -->
+    <section class="container-fluid analysis-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 analysis-text">
+                    <h3>3. Data Analysis</h3>
                     <p>
                         Data analysis is the core of data science, extracting meaningful insights from data. 
                         It helps in making informed decisions, identifying trends, and solving complex problems. 
@@ -104,42 +122,22 @@
                         In a data-driven world, its importance lies in uncovering valuable information that drives growth and innovation.
                     </p>
                 </div>
-                <div class="analysis-img">
-                    <img src="image/analysis.jpg" style="width: 100%; max-width: 100%;" />
+                <div class="col-md-6 analysis-img">
+                    <!-- Apply oval shape to the image -->
+                    <div class="oval-image">
+                        <img src="image/analysis.jpg" class="img-fluid" alt="Data Analysis Image">
+                    </div>
                 </div>
             </div>
-        </section>
-        
-
-<!-- Team Work Section -->
-        <section>
-            <div class="content-container">
-                <div class="teamwork-img">
-                    <img src="image/teamwork.jpg" style="width: 100%; max-width: 100%;" />
-                </div>
-                <div class="teamwork-text">
-                    <h3>
-                        4. Teamwork
-                    </h3>
-                    <p>
-                        Teamwork is vital in data science. It combines expertise, fosters creativity, and accelerates projects. 
-                        Collaboration enhances problem-solving and leads to more robust data-driven solutions. 
-                    </p>
-                    <p>
-                        It fosters knowledge sharing, accelerates learning, and results in well-rounded solutions.
-                        In the realm of data science, teamwork is the driving force behind transformative insights and impactful results.
-                    </p>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
     
-<!-- Implemetation Section -->
-        <section>
-            <div class="content-container">
-                <div class="deployment-text">
-                    <h3>
-                        5. Deployment, Feedback and Continuous Improvement 
-                    </h3>
+    <!-- ---------------------------------------------------- Teamwork Section  -------------------------------------------- -->
+    <section class="container-fluid teamwork-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 order-md-2 teamwork-text">
+                    <h3>4. Teamwork</h3>
                     <p>
                         Teamwork is vital in data science. It combines expertise, fosters creativity, and accelerates projects. 
                         Collaboration enhances problem-solving and leads to more robust data-driven solutions. 
@@ -149,19 +147,109 @@
                         In the realm of data science, teamwork is the driving force behind transformative insights and impactful results.
                     </p>
                 </div>
-                <div class="deployment-img">
-                    <img src="image/deployment.jpg" style="width: 100%; max-width: 100%;" />
+                <div class="col-md-6 order-md-1 teamwork-img">
+                    <!-- Apply oval shape to the image -->
+                    <div class="oval-image">
+                        <img src="image/teamwork.jpg" class="img-fluid" alt="Teamwork Image">
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-<!-- Footer -->
-        <section>
-            <div>
-                <footer >
-                    <p>&copy; 2023 Muqesh-DataScientist</p>
-                </footer>        
+
+    <!-- ---------------------------------------------------- Deployment Section -------------------------------------------- -->
+    <section class="container-fluid deployment-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 deployment-text">
+                    <h3>5. Deployment, Feedback and Continuous Improvement</h3>
+                    <p>
+                        Teamwork is vital in data science. It combines expertise, fosters creativity, and accelerates projects. 
+                        Collaboration enhances problem-solving and leads to more robust data-driven solutions. 
+                    </p>
+                    <p>
+                        It fosters knowledge sharing, accelerates learning, and results in well-rounded solutions.
+                        In the realm of data science, teamwork is the driving force behind transformative insights and impactful results.
+                    </p>
+                </div>
+                <div class="col-md-6 deployment-img">
+                    <!-- Apply oval shape to the image -->
+                    <div class="oval-image">
+                        <img src="image/deployment.jpg" class="img-fluid" alt="Deployment Image">
+                    </div>
+                </div>
             </div>
-        </section>
-    </body>
+        </div>
+    </section>
+
+    <!-- ---------------------------------------------------- Footer Section -------------------------------------------- -->
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">HOME</a></li>
+                        <li><a href="projects.html" class="text-white">PROJECTS</a></li>
+                        <li><a href="about.html" class="text-white">ABOUT Me</a></li>
+                        <li><a href="blog.html" class="text-white">ARTICLES</a></li>
+                        <li><a href="contact.html" class="text-white">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#FACEBOOK" class="text-white">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x "></i>
+                                </span>
+                                FACEBOOK
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#TWITTER" class="text-white">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x "></i>
+                                </span>
+                                TWITTER
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#LINKED IN" class="text-white">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                                </span>
+                                LINKED IN
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h6>GET IN TOUCH :</h6>
+                    <div class="traingle_div">
+                        <a href="contact.html" class="btn btn-info btn-arrow-right">GET IN TOUCH</a>
+                        <a href="contact.html" class="btn btn-transparent">LET'S GO</a>
+                    </div>
+                    <div class="pad_bot"></div>
+                    <div class="pad_bot"></div>
+                    <address class="text-white">
+                        <p>+91 1234567890 | mukeshrana.cds15@iiitb.net</p>
+                        <p>Bangalore/Bengaluru, KA, India</p>
+                    </address>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="pad_bot"></div>
+                    <div class="center">
+                        <p class="text-white">PRIVACY POLICY</p>
+                        <p class="text-white copyright">&copy; 2020 Muqesh-DataScientist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
 </html>
