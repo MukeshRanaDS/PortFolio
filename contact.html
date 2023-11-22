@@ -6,7 +6,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[4]='PHONE';ftypes[4]='phone';fnames[3]='MMERGE3';ftypes[3]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
     <link rel="stylesheet" href="styles.css">
 
     <title>Muqesh - Data Science Portfolio</title>
@@ -37,17 +38,17 @@
                     <div class="get_form_inner">
                         <div class="get_form_inner_text">
                             <h3>Get In Touch</h3>
-                        </div>
-                        <form id="contactForm">
+                        </div>                 
+                        <form id="contactForm" action="https://gmail.us21.list-manage.com/subscribe/post?u=d9cc5cc8c825334387541a7a6&amp;id=8be7889faf&amp;f_id=0007e5e6f0">
                             <div class="grid-50-50">
-                                <input type="text" placeholder="First Name" required>
-                                <input type="text" placeholder="Last Name" required>
-                                <input type="email" placeholder="Email" required>
-                                <input type="tel" placeholder="Phone/Skype" required>
-                            </div>
+                                <input type="text" name="FNAME" class="required text" id="mce-FNAME" placeholder="First Name" required>
+                                <input type="text" name="LNAME" class=" text" id="mce-LNAME" placeholder="Last Name" required>
+                                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email" required>
+                                <input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" placeholder="Phone" required>
+                            </div>                            
                             <div class="grid-full">
-                                <textarea placeholder="About Your Project" cols="30" rows="10" required></textarea>
-                                <input type="submit" value="Submit">
+                                <textarea  type="text" name="MMERGE3" class="required text" id="mce-MMERGE3" placeholder="Your message.." cols="30" rows="10" required></textarea>
+                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn" value="Submit">
                             </div>
                         </form>
                     </div>
@@ -128,7 +129,6 @@
             }
         });
     </script>
-            
 
     <!-- ---------------------------------------------------- Footer Section -------------------------------------------- -->
     <footer class="bg-dark text-white">
